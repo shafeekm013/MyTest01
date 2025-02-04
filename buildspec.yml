@@ -17,6 +17,6 @@ phases:
   commands:
    - echo in post build state
 
- artifacts:
-  files:
-    - 'MyTestEC2YML.yaml'
+artifacts:
+ files:
+  - 'MyTestEC2YML.yaml'
