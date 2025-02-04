@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyEC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: "ami-0d16a00c70ee279b8"
+      InstanceType: "t2.micro"
+      KeyName: "Oregon"
+      SubnetId: "subnet-0ef5992c22fe76c5b"
+      SecurityGroupIds:
+        - sg-02e5837a6188da0ee
+      Tags: 
+          - Key: "Name"
+            Value: "MyTestEc2"
+
+Outputs:
+  MasterNodePublicIP:
+    Description: My Instance Public IP
+    Value: !GetAtt MyEC2.PublicIp
